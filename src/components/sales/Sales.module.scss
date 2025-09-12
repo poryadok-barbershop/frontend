@@ -1,0 +1,50 @@
+.sales {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 100px;
+  padding: 1.5rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  font-family: "Catallina", sans-serif;
+  text-transform: uppercase;
+
+  scroll-margin-top: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.list {
+  font-size: clamp(12px, 3vw, 1.5rem);
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.item {
+  border: 1px solid #f2f2f2;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex: 1;
+
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .sales {
+    margin-top: 50px;
+    scroll-margin-top: 50px;
+    padding: 30px;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

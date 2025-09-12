@@ -1,0 +1,98 @@
+.gallery {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  padding: 1.5rem 0;
+  scroll-margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  font-family: "Catallina", sans-serif;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.list {
+  overflow: hidden;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #292929 70px,
+    #292929 calc(100% - 70px),
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #292929 3rem,
+    #292929 calc(100% - 3rem),
+    transparent 100%
+  );
+}
+
+.images {
+  display: flex;
+  gap: 40px;
+
+  animation: scroll 30s linear infinite;
+}
+
+.image {
+  flex: 1;
+  min-width: 200px;
+  object-fit: cover;
+  height: 300px;
+
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scroll {
+  to {
+    translate: calc(-8 * 240px);
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  translate: 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  left: 3rem;
+}
+
+.right {
+  right: 3rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    margin-top: 50px;
+    scroll-margin-top: 50px;
+  }
+}

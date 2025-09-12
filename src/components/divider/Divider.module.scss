@@ -1,0 +1,19 @@
+.divider {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 100px;
+}
+
+.line {
+  flex: 1;
+  border: none;
+  height: 1.5px !important;
+  background-color: #f2f2f2;
+}
+
+.center {
+  flex-shrink: 0;
+  width: 40px;
+  background-color: transparent !important;
+}

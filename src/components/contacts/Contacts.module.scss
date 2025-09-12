@@ -1,0 +1,72 @@
+.contacts {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 100px;
+  padding: 1.5rem 3rem;
+
+  scroll-margin-top: 100px;
+}
+
+.container {
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+
+  background-color: #f2f2f2;
+  color: #292929;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.title {
+  font-family: "Catallina", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(16px, 3vw, 1.5rem);
+}
+
+.text {
+  line-height: 1.5;
+}
+
+.button {
+  font-family: 'Geist Mono', sans-serif;
+  padding: 0.5rem 1rem;
+  background-color: #1a4a5a;
+  color: #f2f2f2;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .contacts {
+    margin-top: 50px;
+    scroll-margin-top: 50px;
+    padding: 30px;    
+  }
+
+  .container {
+    padding: 30px;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
