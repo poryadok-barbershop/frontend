@@ -1,7 +1,6 @@
 /** biome-ignore-all lint/a11y/noSvgWithoutTitle: <explanation> */
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 /** biome-ignore-all lint/correctness/useExhaustiveDependencies: <explanation> */
-"use client";
 
 import Image from "next/image";
 import { IMAGES } from "./constants";
@@ -13,8 +12,10 @@ export const Gallery = () => {
     <section
       className={st.gallery}
       id="gallery"
+      aria-labelledby="gallery-title"
+      aria-label='Галерея барбершопа'
     >
-      <h2 className={st.title}>Галерея</h2>
+      <h2 className={st.title} id="gallery-title">Галерея</h2>
       <div className={st.list}>
         <div className={st.images}>
           {IMAGES.map(({ src, alt }, index) => (
@@ -27,46 +28,6 @@ export const Gallery = () => {
               height={1080}
             />
           ))}
-          {/* <button
-            type="button"
-            className={`${st.button} ${st.left}`}
-            aria-label="Предыдущее изображение"
-            onClick={prevSlide}
-          >
-            <svg
-              className={st.icon}
-              fill="none"
-              stroke="#f2f2f2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className={`${st.button} ${st.right}`}
-            aria-label="Следующее изображение"
-            onClick={nextSlide}
-          >
-            <svg
-              className={st.icon}
-              fill="none"
-              stroke="#f2f2f2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button> */}
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 .sales {
+  max-width: 1920px;
   flex-shrink: 0;
   width: 100%;
   margin-top: 100px;
@@ -34,13 +35,18 @@
 
   line-height: 1.5;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 900px) {
   .sales {
-    margin-top: 50px;
-    scroll-margin-top: 50px;
-    padding: 30px;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
   }
 
   .list {

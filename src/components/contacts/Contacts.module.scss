@@ -1,4 +1,5 @@
 .contacts {
+  max-width: 1920px;
   flex-shrink: 0;
   width: 100%;
   margin-top: 100px;
@@ -29,15 +30,26 @@
 .title {
   font-family: "Catallina", sans-serif;
   text-transform: uppercase;
-  font-size: clamp(16px, 3vw, 1.5rem);
+  font-size: clamp(20px, 4vw, 26px);
 }
 
 .text {
-  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .button {
   font-family: 'Geist Mono', sans-serif;
+  font-size: 18px;
   padding: 0.5rem 1rem;
   background-color: #1a4a5a;
   color: #f2f2f2;
@@ -46,23 +58,23 @@
 
 @media (max-width: 900px) {
   .contacts {
-    margin-top: 50px;
-    scroll-margin-top: 50px;
-    padding: 30px;    
+    margin-top: 30px;
+    padding: 20px;    
   }
 
   .container {
-    padding: 30px;
+    padding: 20px;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .info {
-    align-items: center;
-  }
-
   .title {
     text-align: center;
+    align-self: center;
+  }
+
+  .button {
+    font-size: 16px;
   }
 
   .iframe {

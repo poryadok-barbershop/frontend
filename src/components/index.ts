@@ -7,3 +7,4 @@ export * from "./header";
 export * from "./philosophy";
 export * from "./price";
 export * from "./sales";
+export * from "./yandex-metrika";

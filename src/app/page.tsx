@@ -18,7 +18,7 @@ export default function Home() {
       <Banner />
       <Philosophy />
       <Price />
-      <Sales/>
+      <Sales />
       <Gallery />
       <Contacts/>
       <Footer />

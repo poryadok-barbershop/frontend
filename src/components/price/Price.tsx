@@ -5,8 +5,13 @@ import st from './Price.module.scss';
 
 export const Price = () => {
   return (
-    <section className={st.prices} id='price'>
-      <h2 className={st.title}>Услуги и цены</h2>
+    <section
+      className={st.prices}
+      id='price'
+      aria-labelledby="price-title"
+      aria-label='Услуги и цены барбершопа'
+    >
+      <h2 className={st.title} id="price-title">Услуги и цены</h2>
       <div>
         <div className={st.table}>
           <div/>

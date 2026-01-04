@@ -1,4 +1,5 @@
 .gallery {
+  max-width: 1920px;
   position: relative;
   margin-top: 100px;
   width: 100%;
@@ -91,8 +92,11 @@
 }
 
 @media screen and (max-width: 900px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
   .gallery {
-    margin-top: 50px;
-    scroll-margin-top: 50px;
+    margin-top: 30px;
   }
 }
